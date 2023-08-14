@@ -22,11 +22,31 @@ paths:
               schema:
                $ref: '#/components/schemas/StudentsResponse'
         
-        '400': 
-          description: Bad Request
-        '404':
-          description: Student not found
+        '500': 
+          description: Internal Server Error
 
+
+  /student:
+    post:
+      tags:
+        - "Student"
+      summary: Add user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StudentInput'
+      responses:
+        '200':
+          description: ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AddStudentsResponse'
+
+        '500':
+          description: Internal Server Error
 components:
   schemas:
     StudentsResponse:
@@ -42,5 +62,31 @@ components:
           type: string
           format: date
           example: 2002-10-29  
-         
+    AddStudentsResponse:
+      type: object
+      properties:
+        id: 
+          type: string
+          example: STD22019
+        name:
+          type: string
+          example: Fifaliana
+        birthDate: 
+          type: string
+          format: date
+          example: 2002-10-29
+    StudentInput:
+      type: object
+      properties:
+        id: 
+          type: string
+          example: New ID
+        name:
+          type: string
+          example: NewStudent
+        birthDate: 
+          type: string
+          format: date
+          example: Birth date
+
             
