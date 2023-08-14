@@ -1,0 +1,46 @@
+openapi: '3.0.2'
+info:
+  title: Onboarding
+  description: STD22019
+  contact:
+    email: hei.fifaliana@gmail.com
+  version: '1.0'
+servers:
+  - url: https://STD22019/v1
+ 
+paths:
+  /students:
+    get:
+      tags:
+        - "Student" 
+      summary: Get all students
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+               $ref: '#/components/schemas/StudentsResponse'
+        
+        '400': 
+          description: Bad Request
+        '404':
+          description: Student not found
+
+components:
+  schemas:
+    StudentsResponse:
+      type: object
+      properties:
+        id: 
+          type: string
+          example: STD22019
+        name:
+          type: string
+          example: Fifaliana
+        birthDate: 
+          type: string
+          format: date
+          example: 2002-10-29  
+         
+            
