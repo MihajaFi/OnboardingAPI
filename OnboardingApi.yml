@@ -26,7 +26,7 @@ paths:
           description: Internal Server Error
 
 
-  /student:
+ 
     post:
       tags:
         - "Student"
