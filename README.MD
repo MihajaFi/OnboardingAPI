@@ -1,5 +1,9 @@
-### URL to get Swagger UI 
+### URL to get Swagger UI  
+# Student UI 
 https://petstore.swagger.io/?url=https://raw.githubusercontent.com/MihajaFi/OnboardingAPI/main/OnboardingApi.yml
+
+# Teacher UI 
+https://petstore.swagger.io/?url=https://raw.githubusercontent.com/MihajaFi/OnboardingAPI/main/TeacherAPI.yml
 
 # Onboarding API Documentation
 This document provides an overview of the endpoints and models available in the Onboarding API. The API is designed to manage student information within the context of STD22019.
