@@ -30,7 +30,7 @@ paths:
     post:
       tags:
         - "Student"
-      summary: Add user
+      summary: Add Student 
       requestBody:
         required: true
         content:
